@@ -1,0 +1,33 @@
+{
+  "contacts":[
+    {
+      "id":"1",
+      "name":"John Doe",
+      "email":"john@wp.pl",
+      "userId":"1"
+    },
+    {
+      "id":"2",
+      "name":"Jan Kowalski",
+      "email":"jan@wp.pl",
+      "userId":"1"
+    }
+
+
+  ],
+  "users":[
+    {
+      "id":"1",
+      "name":"John Doe",
+      "email":"john@wp.pl",
+      "password":"password"
+    },
+    {
+      "id":"2",
+      "name":"Jan Kowalski",
+      "email":"jan@wp.pl",
+      "password":"password1"
+    }
+
+  ]
+}
