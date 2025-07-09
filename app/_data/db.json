@@ -2,8 +2,8 @@
   "contacts":[
     {
       "id":"1",
-      "name":"John Doe",
-      "email":"john@wp.pl",
+      "name":"Piotr Nowak",
+      "email":"piotr@wp.pl",
       "userId":"1"
     },
     {
@@ -18,15 +18,15 @@
   "users":[
     {
       "id":"1",
-      "name":"John Doe",
-      "email":"john@wp.pl",
-      "password":"password"
+      "name":"Ewa Wójcik",
+      "email":"ewa@wp.pl",
+      "password":"123456"
     },
     {
       "id":"2",
-      "name":"Jan Kowalski",
-      "email":"jan@wp.pl",
-      "password":"password1"
+      "name":"Jacek Cybulski",
+      "email":"jacek@wp.pl",
+      "password":"654321"
     }
 
   ]

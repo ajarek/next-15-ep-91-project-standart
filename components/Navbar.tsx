@@ -1,9 +1,10 @@
+import ButtonLogout from "@/components/ButtonLogout"
 import Link from "next/link"
-import LogoutButton from "./LogoutButton"
+
 
 
 const Navbar=()=>{
-  const session= false
+  const session= true
   return(
     <nav className="bg-white shadow-sm">
       <div className='container mx-auto p-4 flex justify-between items-center'>
@@ -12,7 +13,7 @@ const Navbar=()=>{
             {session?(
               <>
               <Link href='/contact' className='hover:text-blue-600 mr-8'>Contacts</Link>
-              <LogoutButton/>
+             <ButtonLogout/>
               </>
             ):(
               <>
