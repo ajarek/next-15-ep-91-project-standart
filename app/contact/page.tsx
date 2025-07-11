@@ -16,7 +16,7 @@ const users = await dataUsers.json()
 
 const ContactPage = () => {
   return (
-    <div className='relative'>
+    <div className='min-h-[calc(100vh-128px)] relative'>
        <Link href='/contact/new' className='absolute right-5 top-5 bg-blue-500 px-4 py-2 rounded-lg'>Add Contact</Link>
        <Link href='/contact/new' className='absolute right-40 top-5 bg-green-500 px-4 py-2 rounded-lg'>Add Users</Link>
       <h1>Main contacts</h1>

@@ -1,5 +1,5 @@
-import { loginAction } from '@/app/actions/auth'
-import React from 'react'
+import { loginAction } from '@/actions/auth'
+
 
 const LoginForm = () => {
   return (

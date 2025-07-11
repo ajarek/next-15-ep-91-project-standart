@@ -27,8 +27,10 @@ const Home = () => {
         <p>{posts.is_active?'Active':'Failed'}</p>
         {posts.hobbies.map((el:Posts["hobbies"],index:number)=><p key={index}>{el}</p>)}
         <p>{posts.data_created}</p>
+        
     </div>
   )
+ 
 }
 
 export default Home
