@@ -1,5 +1,5 @@
 import ButtonLogout from '@/components/ButtonLogout'
-import { getSessionCookie } from '@/lib/session'
+import { deleteSessionCookie, getSessionCookie } from '@/lib/session'
 import Link from 'next/link'
 
 const Navbar = async () => {
@@ -22,7 +22,10 @@ const Navbar = async () => {
               >
                 Contacts
               </Link>
-              {/* <ButtonLogout /> */}
+              <ButtonLogout handleLogout={async () => {
+                'use server'
+                await deleteSessionCookie('user')
+              }}/>
             </>
           ) : (
             <>

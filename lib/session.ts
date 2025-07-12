@@ -20,5 +20,5 @@ export const getSessionCookie = async (name: string): Promise<string | undefined
 //Delete session cookie
 export const deleteSessionCookie = async (name: string): Promise<void> => {
   const cookieStore = await cookies()
-  cookieStore.delete(name )
+  cookieStore.delete(name)
 }
