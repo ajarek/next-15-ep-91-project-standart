@@ -1,33 +1,36 @@
 {
-  "contacts":[
+  "contacts": [
     {
-      "id":"1",
-      "name":"Piotr Nowak",
-      "email":"piotr@wp.pl",
-      "userId":"1"
+      "id": "1",
+      "name": "Piotr Nowak",
+      "email": "piotr@wp.pl",
+      "userId": "1"
     },
     {
-      "id":"2",
-      "name":"Jan Kowalski",
-      "email":"jan@wp.pl",
-      "userId":"1"
+      "id": "2",
+      "name": "Jan Kowalski",
+      "email": "jan@wp.pl",
+      "userId": "1"
     }
-
-
   ],
-  "users":[
+  "users": [
     {
-      "id":"1",
-      "name":"Ewa Wójcik",
-      "email":"ewa@wp.pl",
-      "password":"123456"
+      "id": "0",
+      "name": "Admin",
+      "email": "admin@wp.pl",
+      "password": "admin"
     },
     {
-      "id":"2",
-      "name":"Jacek Cybulski",
-      "email":"jacek@wp.pl",
-      "password":"654321"
+      "id": "1",
+      "name": "Ewa Wójcik",
+      "email": "ewa@wp.pl",
+      "password": "123456"
+    },
+    {
+      "id": "e4668503-ad06-41a5-9d21-cab5e51b61f3",
+      "name": "Jacek Kowalski",
+      "email": "jacek@wp.pl",
+      "password": "jacek123"
     }
-
   ]
 }

@@ -4,6 +4,7 @@ import Link from 'next/link'
 
 const Navbar = async () => {
   const session = await getSessionCookie('user')
+  
   return (
     <nav className='bg-gradient-to-r from-blue-900 via-purple-800 to-pink-700 text-white shadow-sm'>
       <div className='container mx-auto p-4 flex justify-between items-center'>
@@ -14,6 +15,14 @@ const Navbar = async () => {
           Contact Manager
         </Link>
         <div className='flex items-center space-x-4 '>
+          {session==='admin@wp.pl' && (
+            <Link
+              href='/users'
+              className='hover:text-blue-300 mr-8'
+            >
+              Users
+            </Link>
+          )}
           {session ? (
             <>
               <Link
