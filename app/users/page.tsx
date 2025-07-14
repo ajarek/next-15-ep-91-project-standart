@@ -1,4 +1,5 @@
 import ButtonDeleteAction from '@/components/ButtonDeleteAction'
+import { GetUsers } from '@/lib/getUsers'
 import { Metadata } from 'next'
 import Link from 'next/link'
 export const metadata: Metadata = {
@@ -6,12 +7,11 @@ export const metadata: Metadata = {
 }
 
 
-const dataUsers = await fetch('http://localhost:3001/users', {
-  next: { revalidate: 1 },
-}) //{ cache: 'force-cache' }   
-const users = await dataUsers.json()
 
-const UsersPage = () => {
+
+
+const UsersPage = async () => {
+  const users = await GetUsers()
   return (
     <div className='min-h-[calc(100vh-128px)] relative'>
      
@@ -38,7 +38,7 @@ const UsersPage = () => {
           <td>{post.email}</td>
           <td>{post.password}</td>
           <td className='h-14 flex items-center gap-8 justify-center'>
-            <Link href={`/users/${post.id}`} className='bg-blue-500 px-4 py-1 rounded-lg'>
+            <Link href={`/users/edit/${post.id}`} className='bg-blue-500 px-4 py-1 rounded-lg'>
               View
             </Link>
             <ButtonDeleteAction id={post.id.toString()} />

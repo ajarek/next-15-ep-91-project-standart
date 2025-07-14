@@ -2,7 +2,7 @@
 
 import { setSessionCookie } from '@/lib/session'
 import { redirect } from 'next/navigation'
-import { revalidatePath } from 'next/cache'
+import { revalidatePath, revalidateTag } from 'next/cache'
 
 export const loginAction = async (formData: FormData): Promise<void> => {
   const email = formData.get('email')?.toString()
@@ -69,7 +69,8 @@ export const registerAction = async (formData: FormData): Promise<void> => {
     const user = await response.json()
     console.log('User registered:', user.email)
     await setSessionCookie('user', user.email)
-    revalidatePath('/contact')
+   revalidatePath('/users')
+    revalidateTag('/users')   
   } catch (err) {
     console.error('Unexpected error ', err)
     redirect(`/register?error=${encodeURIComponent('Unexpected error ')}`
@@ -89,15 +90,16 @@ export const deleteAction = async (formData: FormData): Promise<void> => {
     const response = await fetch(`http://localhost:3001/users/${id}`, {
       method: 'DELETE',
     })
-    revalidatePath('/contact')   
     if (!response.ok) {
       redirect(`/contact?error=${encodeURIComponent('Delete failed')}`)
     }
-
+    
+    revalidatePath('/users')
+    revalidateTag('/users')   
     console.log('User deleted:', id)
   } catch (err) {
     console.error('Unexpected error during delete:', err)
     redirect(`/contact?error=${encodeURIComponent('Unexpected error during delete')}`)
   }
-  redirect('/contact')
+  redirect('/users')
 }

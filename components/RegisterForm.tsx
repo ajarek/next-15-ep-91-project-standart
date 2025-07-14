@@ -14,6 +14,8 @@ const RegisterForm = () => {
           placeholder='Enter your name '
           required
           className='border border-gray-500 p-2 rounded-lg '
+          autoComplete='off'
+          autoFocus
         />
       </div>
       <div className='flex flex-col gap-4 mt-4'>
@@ -25,6 +27,8 @@ const RegisterForm = () => {
           placeholder='Enter your email '
           required
           className='border border-gray-500 p-2 rounded-lg '
+          autoComplete='off'
+          
         />
       </div>
       <div className='flex flex-col gap-4 mt-4'>
@@ -36,6 +40,7 @@ const RegisterForm = () => {
           placeholder='Enter your password '
           required
           className='border border-gray-500 p-2 rounded-lg '
+          autoComplete='off'
         />
       </div>
       <div className='w-full flex justify-end'>
