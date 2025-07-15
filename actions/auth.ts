@@ -103,3 +103,43 @@ export const deleteAction = async (formData: FormData): Promise<void> => {
   }
   redirect('/users')
 }
+
+export const updateAction = async (formData: FormData): Promise<void> => {
+  const id = formData.get('id')?.toString()
+  const name = formData.get('name')?.toString()
+  const email = formData.get('email')?.toString()
+  const password = formData.get('password')?.toString()
+
+  if (!id || !name || !email || !password) {
+    redirect(`/contact?error=${encodeURIComponent('All fields are required')}`)
+  }
+
+  try {
+    const response = await fetch(`http://localhost:3001/users/${id}`, {
+      method: 'PUT',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({  name, email, password }),
+    })
+
+    
+  
+  if (!response.ok) {
+      redirect(`/contact?error=${encodeURIComponent('Update failed')}`)
+    }
+
+    const user = await response.json()
+    console.log('User updated:', user.email)
+    revalidatePath('/users')
+    revalidateTag('/users')   
+  }
+  catch (err) {
+    console.error('Unexpected error during update:', err)
+    redirect(`/contact?error=${encodeURIComponent('Unexpected error during update')}`)
+  }
+  redirect('/users')
+}
+
+
+ 

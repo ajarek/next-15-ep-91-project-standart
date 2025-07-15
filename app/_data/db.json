@@ -4,13 +4,25 @@
       "id": "1",
       "name": "Piotr Nowak",
       "email": "piotr@wp.pl",
-      "userId": "1"
+      "userId": "ewa@wp.pl"
     },
     {
       "id": "2",
       "name": "Jan Kowalski",
       "email": "jan@wp.pl",
-      "userId": "1"
+      "userId": "jola@wp.pl"
+    },
+    {
+      "id": "99fe39ba-7a8d-43be-996c-3e18eedabb3e",
+      "email": "andrzej@wp.pl",
+      "name": "Andrzej Olechowski",
+      "userId": "admin@wp.pl"
+    },
+    {
+      "id": "50f597eb-7a6c-4be2-bfcb-6fa868d7bdb7",
+      "email": "jola@wp.pl",
+      "name": "Jolanta Tomaszewska",
+      "userId": "ewa@wp.pl"
     }
   ],
   "users": [

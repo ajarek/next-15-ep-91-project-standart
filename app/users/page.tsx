@@ -18,7 +18,7 @@ const UsersPage = async () => {
       <h1>Users</h1>
       <table className="min-w-full border border-gray-200 py-2">
   <thead>
-    <tr className='border-b border-gray-200 hover:bg-gray-100 '>
+    <tr className='border-b border-gray-200  h-14'>
       <th>No</th>
       <th>Name</th>
       <th>Email</th>

@@ -1,7 +1,7 @@
 import  { cookies } from 'next/headers'
 
 //Set session cookie
-export const setSessionCookie = async (name: string, value: string): Promise<void> => {
+export const setSessionCookie = async (name: string, value: string,): Promise<void> => {
   const cookieStore = await cookies()
   cookieStore.set({
     name,
