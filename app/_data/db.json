@@ -23,6 +23,36 @@
       "email": "jola@wp.pl",
       "name": "Jolanta Tomaszewska",
       "userId": "ewa@wp.pl"
+    },
+    {
+      "id": "dd57fe77-469c-411b-9df9-59860b036cf1",
+      "email": "leon@wp.pl",
+      "name": "Wilfredo Leon",
+      "userId": "admin@wp.pl"
+    },
+    {
+      "id": "58930df9-e0a6-4f9f-9404-ecb9e710f362",
+      "email": "kolumb@wp.pl",
+      "name": "Krzysztof Kolumb",
+      "userId": "jola@wp.pl"
+    },
+    {
+      "id": "c62ff368-eb84-448e-881b-e117f74f3cba",
+      "email": "grzegorz@wp.pl",
+      "name": "Grzegorz Łomacz",
+      "userId": "ewa@wp.pl"
+    },
+    {
+      "id": "3d9e3ed6-2af5-4929-a634-8b7f091e6efc",
+      "email": "nowak@wp.pl",
+      "name": "Jakub Nowak",
+      "userId": "admin@wp.pl"
+    },
+    {
+      "id": "7380e8bf-67c9-4f5a-8026-faa96518fb07",
+      "email": "jakub@wp.pl",
+      "name": "Jakub Kochanowski",
+      "userId": "ewa@wp.pl"
     }
   ],
   "users": [
@@ -37,6 +67,12 @@
       "name": "Ewa Wójcik",
       "email": "ewa@wp.pl",
       "password": "123456"
+    },
+    {
+      "id": "c238989a-aa39-4789-89e3-932a361d0383",
+      "name": "Jolanta Śledź",
+      "email": "jola@wp.pl",
+      "password": "jola123"
     }
   ]
 }

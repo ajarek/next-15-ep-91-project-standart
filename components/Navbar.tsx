@@ -26,7 +26,7 @@ const Navbar = async () => {
           {session ? (
             <>
               <Link
-                href='/contact'
+                href='/contacts'
                 className='hover:text-blue-300 mr-8'
               >
                 Contacts

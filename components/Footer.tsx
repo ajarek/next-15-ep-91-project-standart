@@ -24,7 +24,7 @@ const Footer = () => {
            About
           </Link>
           <Link
-            href='/contact'
+            href='/contacts'
             className='hover:underline'
           >
             Contacts

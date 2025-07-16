@@ -38,7 +38,7 @@ export const loginAction = async (formData: FormData): Promise<void> => {
       `/login?error=${encodeURIComponent('Unexpected error during login')}`
     )
   }
-  redirect('/contact')
+  redirect('/contacts')
 }
 export const registerAction = async (formData: FormData): Promise<void> => {
   
@@ -76,14 +76,14 @@ export const registerAction = async (formData: FormData): Promise<void> => {
     redirect(`/register?error=${encodeURIComponent('Unexpected error ')}`
     )
   }
-  redirect('/contact')
+  redirect('/contacts')
 }
 
 export const deleteAction = async (formData: FormData): Promise<void> => {
   const id = formData.get('id')?.toString()
 
   if (!id) {
-    redirect(`/contact?error=${encodeURIComponent('ID is required')}`)
+    redirect(`/users?error=${encodeURIComponent('ID is required')}`)
   }
 
   try {
@@ -91,7 +91,7 @@ export const deleteAction = async (formData: FormData): Promise<void> => {
       method: 'DELETE',
     })
     if (!response.ok) {
-      redirect(`/contact?error=${encodeURIComponent('Delete failed')}`)
+      redirect(`/users?error=${encodeURIComponent('Delete failed')}`)
     }
     
     revalidatePath('/users')
@@ -99,7 +99,7 @@ export const deleteAction = async (formData: FormData): Promise<void> => {
     console.log('User deleted:', id)
   } catch (err) {
     console.error('Unexpected error during delete:', err)
-    redirect(`/contact?error=${encodeURIComponent('Unexpected error during delete')}`)
+    redirect(`/users?error=${encodeURIComponent('Unexpected error during delete')}`)
   }
   redirect('/users')
 }
@@ -111,7 +111,7 @@ export const updateAction = async (formData: FormData): Promise<void> => {
   const password = formData.get('password')?.toString()
 
   if (!id || !name || !email || !password) {
-    redirect(`/contact?error=${encodeURIComponent('All fields are required')}`)
+    redirect(`/users?error=${encodeURIComponent('All fields are required')}`)
   }
 
   try {
@@ -126,7 +126,7 @@ export const updateAction = async (formData: FormData): Promise<void> => {
     
   
   if (!response.ok) {
-      redirect(`/contact?error=${encodeURIComponent('Update failed')}`)
+      redirect(`/users?error=${encodeURIComponent('Update failed')}`)
     }
 
     const user = await response.json()
@@ -136,7 +136,7 @@ export const updateAction = async (formData: FormData): Promise<void> => {
   }
   catch (err) {
     console.error('Unexpected error during update:', err)
-    redirect(`/contact?error=${encodeURIComponent('Unexpected error during update')}`)
+    redirect(`/users?error=${encodeURIComponent('Unexpected error during update')}`)
   }
   redirect('/users')
 }

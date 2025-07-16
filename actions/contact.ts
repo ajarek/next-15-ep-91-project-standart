@@ -1,4 +1,5 @@
 "use server"
+import { revalidatePath, revalidateTag } from "next/cache"
 import { redirect } from "next/navigation"
 
 
@@ -10,7 +11,7 @@ export const addContactAction = async (formData: FormData): Promise<void> => {
   const userId = formData.get('userId')?.toString()
 
   if (!email || !name || !id) {
-    redirect(`/contact?error=${encodeURIComponent('All fields are required')}`)
+    redirect(`/contacts?error=${encodeURIComponent('All fields are required')}`)
   }
 
   try {
@@ -23,13 +24,44 @@ export const addContactAction = async (formData: FormData): Promise<void> => {
     })
 
     if (!response.ok) {
-      redirect(`/contact?error=${encodeURIComponent('Failed to add contact')}`)
+      redirect(`/contacts?error=${encodeURIComponent('Failed to add contact')}`)
     }
+    revalidatePath('/users')
+    revalidateTag('/users')  
 
     const contact = await response.json()
-    console.log('Contact added:', contact)
+    console.log('Contacts added:', contact)
   } catch (err) {
-    console.error('Unexpected error during add contact:', err)
-    redirect(`/contact?error=${encodeURIComponent('Unexpected error during add contact')}`)
+    console.error('Unexpected error during add contacts:', err)
+    redirect(`/contacts?error=${encodeURIComponent('Unexpected error during add contact')}`)
   }
+   redirect('/contacts?success=true')
+}
+
+
+
+
+export const deleteUser = async (formData: FormData): Promise<void> => {
+  const id = formData.get('id')?.toString()
+
+  if (!id) {
+    redirect(`/contacts?error=${encodeURIComponent('ID is required')}`)
+  }
+
+  try {
+    const response = await fetch(`http://localhost:3001/contacts/${id}`, {
+      method: 'DELETE',
+    })
+    if (!response.ok) {
+      redirect(`/contacts?error=${encodeURIComponent('Delete failed')}`)
+    }
+    
+    revalidatePath('/contacts')
+    revalidateTag('/contacts')   
+    console.log('Contact deleted:', id)
+  } catch (err) {
+    console.error('Unexpected error during delete:', err)
+    redirect(`/contacts?error=${encodeURIComponent('Unexpected error during delete')}`)
+  }
+  redirect('/contacts')
 }
