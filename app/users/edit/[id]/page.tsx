@@ -3,7 +3,7 @@ import { GetUsers } from '@/lib/getUsers';
 import React from 'react'
 
 type User = {
-  id: number;
+  id: string;
   name: string;
   email: string;
   password: string;
@@ -12,7 +12,7 @@ type User = {
 const EditUserId = async ({ params,}: {params: Promise<{ id: string }>} ) => {
   const { id } = await params;
   const users = await GetUsers()
-  const user = users.find((user: User) => user.id == Number(id))
+  const user = users.find((user: User) => user.id == id)
   if (!user) {
     return <div>User not found</div>
   }

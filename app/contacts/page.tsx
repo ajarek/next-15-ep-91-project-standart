@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { getSessionCookie } from '@/lib/session'
 import { redirect } from 'next/navigation'
 import { GetContacts } from '@/lib/getContacts'
-import ButtonDeleteUser from '@/components/ButtonDeleteUser'
+import ButtonDeleteContact from '@/components/ButtonDeleteContact'
 export const metadata: Metadata = {
   title: 'Contacts',
 }
@@ -22,7 +22,7 @@ const ContactPage = async () => {
       >
         Add Contact
       </Link>
-      <h1 className='w-full text-2xl font-bold text-center'>Main contacts</h1>
+      <h1 className='w-full text-2xl font-bold text-center'>{session=== 'admin@wp.pl'?'All contacts':'Main contacts'}</h1>
       <table className="min-w-full border border-gray-200 py-2">
   <thead>
     <tr className='border-b border-gray-200  h-14'>
@@ -36,7 +36,7 @@ const ContactPage = async () => {
   </thead>
   <tbody className=''>
       {contacts
-      .filter((post: { userId: string }) => post.userId === session)
+      .filter((post: { userId: string }) => (session=== 'admin@wp.pl'|| post.userId === session ))
       .map((post: { id: number; name: string; email: string; userId: string }, index:number) => (
         <tr
           key={post.id}
@@ -50,7 +50,7 @@ const ContactPage = async () => {
             <Link href={`/contacts/edit/${post.id}`} className='bg-blue-500 px-4 py-1 rounded-lg'>
               View
             </Link>
-            <ButtonDeleteUser id={post.id.toString()} />
+            <ButtonDeleteContact id={post.id.toString()} />
           </td>
          
         </tr>

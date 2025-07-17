@@ -1,9 +1,9 @@
-import { registerAction } from '@/actions/auth'
+import { registerUser } from '@/actions/auth'
 
 
 const RegisterForm = () => {
   return (
-    <form action={registerAction} className='w-full max-w-2xl border-2 rounded-lg p-8 gap-4'>
+    <form action={registerUser} className='w-full max-w-2xl border-2 rounded-lg p-8 gap-4'>
       <input type="hidden" name="id" value={crypto.randomUUID()} />
       <div className='flex flex-col gap-4'>
         <label htmlFor='email'>Name</label>

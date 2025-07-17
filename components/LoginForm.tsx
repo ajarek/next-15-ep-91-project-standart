@@ -1,9 +1,9 @@
-import { loginAction } from '@/actions/auth'
+import { loginUser } from '@/actions/auth'
 
 
 const LoginForm = () => {
   return (
-    <form action={loginAction} className='w-full max-w-2xl border-2 rounded-lg p-8 gap-4'>
+    <form action={loginUser} className='w-full max-w-2xl border-2 rounded-lg p-8 gap-4'>
       <div className='flex flex-col gap-4'>
         <label htmlFor='email'>Email</label>
         <input

@@ -1,9 +1,9 @@
-import { updateAction } from '@/actions/auth'
+import { updateUser } from '@/actions/auth'
 
 
 const EditFormUser = ({ user }: { user: { id: string; name: string; email: string; password: string } }) => {
   return (
-    <form action={updateAction} className='w-full max-w-2xl border-2 rounded-lg p-8 gap-4'>
+    <form action={updateUser} className='w-full max-w-2xl border-2 rounded-lg p-8 gap-4'>
       <input type="hidden" name="id" value={user.id} />
       <div className='flex flex-col gap-4'>
         <label htmlFor='email'>Name</label>

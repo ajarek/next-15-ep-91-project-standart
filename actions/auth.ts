@@ -4,7 +4,7 @@ import { setSessionCookie } from '@/lib/session'
 import { redirect } from 'next/navigation'
 import { revalidatePath, revalidateTag } from 'next/cache'
 
-export const loginAction = async (formData: FormData): Promise<void> => {
+export const loginUser = async (formData: FormData): Promise<void> => {
   const email = formData.get('email')?.toString()
   const password = formData.get('password')?.toString()
 
@@ -40,7 +40,7 @@ export const loginAction = async (formData: FormData): Promise<void> => {
   }
   redirect('/contacts')
 }
-export const registerAction = async (formData: FormData): Promise<void> => {
+export const registerUser = async (formData: FormData): Promise<void> => {
   
   const id = formData.get('id')?.toString()
   const name = formData.get('name')?.toString()
@@ -79,7 +79,8 @@ export const registerAction = async (formData: FormData): Promise<void> => {
   redirect('/contacts')
 }
 
-export const deleteAction = async (formData: FormData): Promise<void> => {
+
+export const deleteUser = async (formData: FormData): Promise<void> => {
   const id = formData.get('id')?.toString()
 
   if (!id) {
@@ -104,7 +105,8 @@ export const deleteAction = async (formData: FormData): Promise<void> => {
   redirect('/users')
 }
 
-export const updateAction = async (formData: FormData): Promise<void> => {
+
+export const updateUser = async (formData: FormData): Promise<void> => {
   const id = formData.get('id')?.toString()
   const name = formData.get('name')?.toString()
   const email = formData.get('email')?.toString()

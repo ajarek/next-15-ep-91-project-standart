@@ -41,7 +41,7 @@ export const addContactAction = async (formData: FormData): Promise<void> => {
 
 
 
-export const deleteUser = async (formData: FormData): Promise<void> => {
+export const deleteContact = async (formData: FormData): Promise<void> => {
   const id = formData.get('id')?.toString()
 
   if (!id) {
