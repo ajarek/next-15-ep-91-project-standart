@@ -15,7 +15,7 @@ const ContactPage = async () => {
   }
   const contacts = await GetContacts()
   return (
-    <div className='min-h-[calc(100vh-128px)] relative flex flex-col items-start justify-start gap-8 px-4'>
+    <div className='min-h-[calc(100vh-64px)] relative flex flex-col items-start justify-start gap-8 px-4'>
       <Link
         href='/contacts/new'
         className='absolute right-5 top-0 bg-blue-500 px-4 py-2 rounded-lg'

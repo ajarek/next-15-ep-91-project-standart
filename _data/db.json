@@ -1,12 +1,6 @@
 {
   "contacts": [
     {
-      "id": "1",
-      "name": "Piotr Nowak",
-      "email": "piotr@wp.pl",
-      "userId": "ewa@wp.pl"
-    },
-    {
       "id": "2",
       "name": "Jan Kowalski",
       "email": "jan@wp.pl",
@@ -23,12 +17,6 @@
       "email": "leon@wp.pl",
       "name": "Wilfredo Leon",
       "userId": "admin@wp.pl"
-    },
-    {
-      "id": "58930df9-e0a6-4f9f-9404-ecb9e710f362",
-      "email": "kolumb@wp.pl",
-      "name": "Krzysztof Kolumb",
-      "userId": "jola@wp.pl"
     },
     {
       "id": "c62ff368-eb84-448e-881b-e117f74f3cba",
@@ -51,7 +39,7 @@
     {
       "id": "99378ad0-7fc2-4167-9ce2-0079c1fa7c9a",
       "email": "karol@wp.pl",
-      "name": "Karol Wolski",
+      "name": "Karol Lwowski",
       "userId": "ewa@wp.pl"
     },
     {
@@ -59,6 +47,12 @@
       "email": "komar@wp.pl",
       "name": "Andrzej Komar",
       "userId": "admin@wp.pl"
+    },
+    {
+      "id": "298016c3-2b66-481e-87b2-b7020fffcb62",
+      "email": "kolumb@wp.pl",
+      "name": "Krzysztof Kolumb",
+      "userId": "jola@wp.pl"
     }
   ],
   "users": [

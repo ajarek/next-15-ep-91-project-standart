@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 const UsersPage = async () => {
   const users = await GetUsers()
   return (
-    <div className='min-h-[calc(100vh-128px)] relative'>
+    <div className='min-h-[calc(100vh-64px)] relative'>
       <h1 className='w-full text-center text-2xl font-semibold mb-4'>Users</h1>
       <table className='min-w-full border border-gray-200 py-2'>
         <thead>

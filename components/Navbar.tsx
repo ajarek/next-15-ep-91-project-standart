@@ -7,7 +7,7 @@ const Navbar = async () => {
   
   return (
     <nav className='bg-gradient-to-r from-blue-900 via-purple-800 to-pink-700 text-white shadow-sm'>
-      <div className='container mx-auto p-4 flex justify-between items-center'>
+      <div className='h-16 max-w-7xl container mx-auto px-4  flex justify-between items-center'>
         <Link
           href='/'
           className='text-xl font-bold '
