@@ -20,7 +20,7 @@ type Posts = {
 }
 const Home = () => {
   return (
-    <div className='min-h-[calc(100vh-64px)]  flex flex-col items-start justify-start'>
+    <div className='  flex flex-col items-start justify-start'>
       <div className='w-full relative'>
         <Image
           src='/images/banner.jpg'
@@ -30,12 +30,12 @@ const Home = () => {
         />
         <Link
           href='/contacts'
-          className='absolute top-4 left-4 bg-green-600 hover:bg-green-500 text-white text-xl font-semibold px-8 py-4 rounded-md'
+          className='absolute top-2 left-4 bg-green-600 hover:bg-green-500 text-white text-xl font-semibold px-4 py-2 rounded-md'
         >
           Start here
         </Link>
 
-        <div className='absolute bottom-28 left-1/2 transform -translate-x-1/2 flex bg-amber-300  text-black text-center gap-2 p-4 shadow-2xl rounded-md border-2 border-gray-400'>
+        <div className='absolute bottom-28 left-1/2 transform -translate-x-1/2 flex bg-amber-300  text-black text-center gap-2 p-4 shadow-2xl rounded-md border-2 border-gray-400 max-lg:hidden'>
           <h1>{posts.name}</h1>
           
           <p>{posts.address.street}</p>

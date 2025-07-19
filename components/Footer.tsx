@@ -18,19 +18,13 @@ const Footer = () => {
            Home
           </Link>
           <Link
-            href='/about'
-            className='hover:underline'
-          >
-           About
-          </Link>
-          <Link
             href='/contacts'
             className='hover:underline'
           >
             Contacts
           </Link>
         </nav>
-        <div className='flex space-x-4 mt-4 md:mt-0'>
+        <div className='min-w-60 flex justify-center space-x-4 mt-4 md:mt-0'>
           <a
             href='https://github.com/'
             target='_blank'

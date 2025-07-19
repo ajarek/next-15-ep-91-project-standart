@@ -40,12 +40,12 @@ const UsersPage = async () => {
                 <td>{post.name}</td>
                 <td>{post.email}</td>
                 <td>{post.password}</td>
-                <td className='h-14 flex items-center gap-8 justify-center'>
+                <td className='h-14 flex items-center gap-8 max-sm:gap-4 justify-center'>
                   <Link
                     href={`/users/edit/${post.id}`}
-                    className='bg-blue-500 px-4 py-1 rounded-lg'
+                    className='p-1 border-2 border-blue-500 rounded-full text-xl'
                   >
-                    View
+                    🖊️
                   </Link>
                   <ButtonDeleteUser id={post.id.toString()} />
                 </td>
