@@ -6,12 +6,13 @@ export const metadata: Metadata = {
   title: 'Login Page',
 }
 
-const LoginPage = ({ searchParams }: { searchParams: { error?: string } }) => {
+const LoginPage = async ({ searchParams }: { searchParams: Promise<{ error?: string }> }) => {
+  const error = await searchParams;
   return <div className='min-h-[calc(100vh-128px)] flex flex-col items-center justify-center gap-4'>
     <h1 className='text-3xl font-semibold'>Login</h1>
-    {searchParams.error && (
+    {error && (
       <div className='text-red-500'>
-        {decodeURIComponent(searchParams.error)}
+        {decodeURIComponent(error .error || '')}
       </div>
     )}
     <LoginForm/>
