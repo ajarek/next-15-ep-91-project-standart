@@ -6,12 +6,16 @@ First, run the development server:
 
 ```bash
 npm run dev
+npm run server
 # or
 yarn dev
+yarn server
 # or
 pnpm dev
+pnpm server
 # or
 bun dev
+bun server
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
