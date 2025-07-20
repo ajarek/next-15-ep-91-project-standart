@@ -26,8 +26,8 @@ export const addContactAction = async (formData: FormData): Promise<void> => {
     if (!response.ok) {
       redirect(`/contacts?error=${encodeURIComponent('Failed to add contact')}`)
     }
-    revalidatePath('/users')
-    revalidateTag('/users')  
+    revalidatePath('/contacts')
+    revalidateTag('/contacts')  
 
     const contact = await response.json()
     console.log('Contacts added:', contact)
